@@ -29,8 +29,6 @@ public class HomeTask9 {
         Wall wall = new Wall();
         RunningTrack rt = new RunningTrack();
 
-        //String[] name = {human.name, robot.name, kitty.name};
-
         int[] barriers = {wall.heightOfWall, rt.distanceOfRun};
         int[] players = {human.isJump(), robot.isJump(), kitty.isJump()
                 , kitty.isRun(), robot.isRun(), human.isRun()};
