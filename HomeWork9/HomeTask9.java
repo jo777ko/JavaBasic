@@ -29,19 +29,28 @@ public class HomeTask9 {
         Wall wall = new Wall();
         RunningTrack rt = new RunningTrack();
 
+        //String[] name = {human.name, robot.name, kitty.name};
+
         int[] barriers = {wall.heightOfWall, rt.distanceOfRun};
         int[] players = {human.isJump(), robot.isJump(), kitty.isJump()
                 , kitty.isRun(), robot.isRun(), human.isRun()};
         for (int i = 0, j = 5; i < j; i++,j--) {
+            if ( i ==0 && j ==5){
+                System.out.print(human.name + ": ");
+            } else if (i ==1 && j ==4){
+                System.out.print(robot.name + ": ");
+            } else {
+                System.out.print(kitty.name + ": ");
+            }
             if (barriers[0] < players[i]) {
-                System.out.println("Do next");
+                System.out.println("Do next" );
                 if (barriers[1] < players[j]) {
-                    System.out.println("You win.");
+                    System.out.println("You win." );
                 } else {
                     System.out.println("You lose, because you needed to pass first barrier.");
                 }
             } else {
-                System.out.println("You lose.");
+                System.out.println("You lose." );
             }
         }
     }
